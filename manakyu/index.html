@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まなきゅう — うちの子のための、1日1問。</title>
+  <meta name="description" content="現役獣医師が開発したペットオーナー向け教育アプリ。犬・猫の年齢や季節に合わせたデイリークイズで、知らなかったペットケア知識に自然と気づけます。">
+  <meta property="og:title" content="まなきゅう — うちの子のための、1日1問。">
+  <meta property="og:description" content="現役獣医師が開発したペットオーナー向け教育アプリ。デイリークイズで、知らなかったペットケア知識に自然と気づけます。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mopsworks.jp/manakyu/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://mopsworks.jp/manakyu/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mopsworks.jp/manakyu/ogp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/manakyu/index.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">まな<span>きゅう</span></div>
+      <ul class="nav-links">
+        <li><a href="#features">特徴</a></li>
+        <li><a href="#screenshots">スクリーンショット</a></li>
+        <li><a href="#about">開発者について</a></li>
+        <li><a href="#support">お問い合わせ</a></li>
+      </ul>
+      <button type="button" class="lang-switch" id="langToggle" onclick="toggleEnglish()">English</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        獣医師が開発
+      </div>
+      <h1>「知らなかった」に<em>気づく</em>だけで、<br>うちの子の毎日が変わる。</h1>
+      <p class="hero-subtitle">
+        まなきゅうは、現役獣医師が開発したペットオーナー向け教育アプリです。<br>
+        犬・猫の年齢や季節に合わせた<strong>1日1問のクイズ</strong>で、<br>
+        知らなかったペットケア知識に自然と気づけます。
+      </p>
+
+      <div class="hero-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="screenShots/Home.png" alt="まなきゅう ホーム画面" class="phone-screenshot">
+          </div>
+        </div>
+      </div>
+
+      <div class="store-badges">
+        <div class="store-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+          <div>
+            <span class="small-text">Download on the</span>
+            App Store
+          </div>
+        </div>
+        <div class="store-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.2l2.807 1.626a1 1 0 0 1 0 1.734l-2.807 1.626L15.206 12l2.492-2.493zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+          <div>
+            <span class="small-text">GET IT ON</span>
+            Google Play
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">※ 近日公開予定</p>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>まなきゅうの特徴</h2>
+        <p>毎日1問。気づいたら、うちの子に詳しくなっている。</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon coral">🎯</div>
+          <h3>パーソナライズされた出題</h3>
+          <p>ペットの種類（犬 or 猫）、年齢、季節に合わせて問題を最適化。今のうちの子に本当に必要な知識から学べます。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon green">📅</div>
+          <h3>1日1問、続けやすい</h3>
+          <p>忙しい日でも1問だけ。連続チャレンジ記録（ストリーク）で、学習の継続を自然にサポートします。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon amber">🗺️</div>
+          <h3>知識マップで成長を実感</h3>
+          <p>カテゴリ別の学習進捗と正答率を可視化。どの分野に詳しくなったか、どこが弱いかが一目でわかります。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon cream">⚡</div>
+          <h3>ヒヤリシナリオで実践力</h3>
+          <p>「チョコレートを食べてしまった」「散歩中に拾い食いした」など、実際に起こりうるシナリオで対処法を学べます。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon coral">🏅</div>
+          <h3>称号バッジでモチベーション</h3>
+          <p>学習の節目で称号を獲得。コレクション要素で長く楽しめます。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon green">💡</div>
+          <h3>不正解は「気づき」</h3>
+          <p>間違えても「残念」とは言いません。「知れてよかった！」— 知らなかったことに気づけた、それだけで一歩前進です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Screenshots ===== -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <h2>スクリーンショット</h2>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshot-item">
+        <img src="screenShots/Home.png" alt="ホーム画面" class="screenshot-img">
+        <p class="screenshot-label">ホーム</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="screenShots/Quiz.png" alt="クイズ出題画面" class="screenshot-img">
+        <p class="screenshot-label">デイリークイズ</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="screenShots/Result.png" alt="解説・フィードバック画面" class="screenshot-img">
+        <p class="screenshot-label">解説・フィードバック</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="screenShots/KnowledgeMap.png" alt="知識マップ画面" class="screenshot-img">
+        <p class="screenshot-label">知識マップ</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="screenShots/Hiyari.png" alt="ヒヤリシナリオ画面" class="screenshot-img">
+        <p class="screenshot-label">ヒヤリシナリオ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-icon">🩺</div>
+        <div class="about-content">
+          <h2>現役獣医師が開発しています</h2>
+          <p>
+            まなきゅうは、現役の獣医師が企画・開発・コンテンツ作成のすべてを行っています。<br>
+            「ちょっとした知識があるだけで、防げることがたくさんある」—<br>
+            日々の診察で感じるそんな思いから生まれたアプリです。<br>
+            すべてのクイズと解説は獣医学的知見に基づいて作成されていますが、<br>
+            本アプリは教育目的であり、獣医療の診断・治療の代替ではありません。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Data & Privacy ===== -->
+  <section class="privacy-section" id="privacy">
+    <div class="container">
+      <h2>データの取り扱いについて</h2>
+
+      <div class="privacy-cards">
+        <div class="privacy-card">
+          <h3>🔐 認証情報</h3>
+          <p>Google / Apple のOAuth認証を使用。パスワードはアプリ側で保持しません。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>🐾 ペット情報</h3>
+          <p>ペットの種類・年齢・名前はクイズのパーソナライズにのみ使用します。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>📊 学習データ</h3>
+          <p>クイズの回答履歴は出題最適化と学習進捗表示に使用します。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>🗑️ アカウント削除</h3>
+          <p>設定画面からいつでもアカウントと全データを削除できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== English Section (for Google OAuth verification) ===== -->
+  <section class="english-section" id="english">
+    <div class="container">
+      <h2>About Manakyu</h2>
+      <p class="en-subtitle">A pet care education app developed by a licensed veterinarian.</p>
+
+      <div class="en-grid">
+        <div class="en-block">
+          <h3>What is Manakyu?</h3>
+          <p>
+            Manakyu is a daily quiz app designed for pet owners (dogs &amp; cats).
+            Developed by a practicing veterinarian in Japan, it delivers personalized
+            quizzes based on your pet's species, age, and the current season —
+            helping you discover pet care knowledge you didn't know you were missing.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Key Features</h3>
+          <ul>
+            <li>Personalized daily quizzes (dog/cat, age, season)</li>
+            <li>Knowledge map to track learning progress</li>
+            <li>"Hiyari" real-life emergency scenarios</li>
+            <li>Achievement badges &amp; streak tracking</li>
+            <li>All content created &amp; reviewed by a veterinarian</li>
+          </ul>
+        </div>
+
+        <div class="en-block">
+          <h3>Authentication</h3>
+          <p>
+            Manakyu uses Google OAuth 2.0 and Apple Sign-In for authentication.
+            We request access to your basic profile information (name and email address)
+            solely for account identification purposes. We do not access any other
+            Google or Apple services on your behalf.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Data We Collect</h3>
+          <ul>
+            <li>Email address (via OAuth, for account identification)</li>
+            <li>Display name (via OAuth, optional)</li>
+            <li>Pet information (species, age, name — for quiz personalization)</li>
+            <li>Pet profile photo (optional, user-uploaded)</li>
+            <li>Quiz answer history (for progress tracking)</li>
+            <li>App usage analytics (anonymized, via Firebase Analytics)</li>
+          </ul>
+        </div>
+
+        <div class="en-data-table">
+          <h3>Google API Scopes &amp; Usage</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Scope</th>
+                <th>Purpose</th>
+                <th>Data Accessed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>openid</code></td>
+                <td>Authentication</td>
+                <td>User identifier</td>
+              </tr>
+              <tr>
+                <td><code>email</code></td>
+                <td>Account identification</td>
+                <td>Email address</td>
+              </tr>
+              <tr>
+                <td><code>profile</code></td>
+                <td>Display name (optional)</td>
+                <td>Name, profile picture URL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="en-block">
+          <h3>Data Deletion</h3>
+          <p>
+            Users can delete their account and all associated data at any time
+            through the app's Settings screen. Upon deletion, all user data
+            including authentication records, Firestore documents, and uploaded
+            photos are permanently removed.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Contact &amp; Developer</h3>
+          <p>
+            Developer: MopsWorks<br>
+            Email: <a href="mailto:contact@mopsworks.jp">contact@mopsworks.jp</a><br>
+            Website: <a href="https://mopsworks.jp" target="_blank" rel="noopener">mopsworks.jp</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Support / Contact ===== -->
+  <section class="support" id="support">
+    <div class="container">
+      <h2>お問い合わせ</h2>
+      <p>
+        アプリに関するご質問・不具合のご報告・ご要望などがございましたら、<br>
+        以下のメールアドレスまでお気軽にご連絡ください。
+      </p>
+      <a href="mailto:contact@mopsworks.jp" class="support-email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        contact@mopsworks.jp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Medical Disclaimer ===== -->
+  <div class="disclaimer">
+    <div class="container">
+      本アプリは教育目的であり、獣医療の診断・治療の代替ではありません。<br>
+      ペットの健康に気になることがあれば、かかりつけの獣医師にご相談ください。<br>
+      <span style="font-family: var(--font-en);">This app is for educational purposes only and is not a substitute for veterinary diagnosis or treatment.</span>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">まな<span>きゅう</span></div>
+      <ul class="footer-links">
+        <li><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        <li><a href="terms.html" target="_blank" rel="noopener">利用規約</a></li>
+        <li><a href="#support">お問い合わせ</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 MopsWorks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleEnglish() {
+      var section = document.getElementById('english');
+      var btn = document.getElementById('langToggle');
+      var isVisible = section.classList.toggle('is-visible');
+      btn.classList.toggle('is-active', isVisible);
+      btn.textContent = isVisible ? '日本語に戻る' : 'English';
+      if (isVisible) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+
+</body>
+</html>
