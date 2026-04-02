@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゅんびちょう — 子どもとお出かけ持ち物リスト</title>
+  <meta name="description" content="行き先と天気に合わせて持ち物リストを自動作成。家族で共有して、子連れお出かけの準備をもっとラクに。">
+  <meta property="og:title" content="じゅんびちょう — 子どもとお出かけ持ち物リスト">
+  <meta property="og:description" content="行き先と天気に合わせて持ち物リストを自動作成。家族で共有して、子連れお出かけの準備をもっとラクに。">
+  <meta property="og:type" content="website">
+  <!-- TODO: og:url を本番URLに更新 -->
+  <meta property="og:image" content="https://mopsworks.jp/junbicho/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://mopsworks.jp/junbicho/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mopsworks.jp/junbicho/ogp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/junbicho/index.css">
+</head>
+
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">じゅんび<span>ちょう</span></div>
+      <ul class="nav-links">
+        <li><a href="#features">特徴</a></li>
+        <li><a href="#how">使い方</a></li>
+        <li><a href="#screenshots">スクリーンショット</a></li>
+        <li><a href="#support">お問い合わせ</a></li>
+      </ul>
+      <button type="button" class="lang-switch" id="langToggle" onclick="toggleEnglish()">English</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M12 3v1m0 16v1m-8-9H3m18 0h-1m-2.636-6.364-.707.707M6.343 17.657l-.707.707m0-12.728.707.707m11.314 11.314.707.707" />
+          <circle cx="12" cy="12" r="4" />
+        </svg>
+        天気に合わせて自動提案
+      </div>
+      <h1>「あ、忘れた！」を<br><em>なくす</em>お出かけ準備。</h1>
+      <p class="hero-subtitle">
+        じゅんびちょうは、<br>子連れお出かけの持ち物チェックリストアプリです。<br>
+        行き先と天気に合わせた<strong>持ち物リストを自動作成</strong>。<br>
+        家族で共有して、準備をもっとラクに。
+      </p>
+
+      <div class="hero-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="placeholder-text">
+              <span class="icon">👜</span>
+              アプリスクリーンショット<br>（準備中）
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="store-badges">
+        <div class="store-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83" />
+            <path
+              d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11" />
+          </svg>
+          <div>
+            <span class="small-text">Download on the</span>
+            App Store
+          </div>
+        </div>
+        <div class="store-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.2l2.807 1.626a1 1 0 0 1 0 1.734l-2.807 1.626L15.206 12l2.492-2.493zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+          </svg>
+          <div>
+            <span class="small-text">GET IT ON</span>
+            Google Play
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">※ 近日公開予定</p>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>じゅんびちょうの特徴</h2>
+        <p>毎週末のお出かけ準備が、もっと気軽になる。</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon coral">☀️</div>
+          <h3>天気×行き先で自動提案</h3>
+          <p>お出かけ日の天気と気温に合わせて、必要な持ち物を自動でリストアップ。暑い日は保冷バッグ、雨の日はレインコートなど。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">👨‍👩‍👧</div>
+          <h3>家族でリアルタイム共有</h3>
+          <p>「リスト見てやっといて」の一言でOK。誰が何を準備したかリアルタイムで見えるから、パパにも安心してお任せできます。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon green">💡</div>
+          <h3>振り返りで次回はもっとラクに</h3>
+          <p>「持っていけばよかった」を記録すると、次回の同じタイプのお出かけに自動で反映。使うほどあなたの家族にぴったりのリストに。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon cream">🛒</div>
+          <h3>買い物リストと連動</h3>
+          <p>準備中に「おむつが足りない！」と気づいたら、ワンタップで買い物リストに追加。サイズやブランドもメモで残せます。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon coral">👶</div>
+          <h3>0〜3歳の子連れに最適化</h3>
+          <p>おむつ、離乳食、ぐずり対策グッズなど、小さな子ども連れに特化したテンプレートを用意。もちろんカスタマイズも自由自在。</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">💬</div>
+          <h3>祖父母にもテキスト共有</h3>
+          <p>アプリを使っていない祖父母にも、LINEなどで持ち物リストをそのまま送信。預けるときの説明がぐっとラクに。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Destinations ===== -->
+  <section class="destinations" id="destinations">
+    <div class="container">
+      <h2>5つの行き先タイプ</h2>
+      <p>近いタイプを選ぶだけ。あとはアプリが最適なリストを作ります。</p>
+
+      <div class="dest-grid">
+        <div class="dest-chip"><span class="dest-emoji">🌳</span> 公園・ピクニック</div>
+        <div class="dest-chip"><span class="dest-emoji">🛍️</span> ショッピングモール</div>
+        <div class="dest-chip"><span class="dest-emoji">🏠</span> 実家・祖父母宅</div>
+        <div class="dest-chip"><span class="dest-emoji">🍽️</span> レストラン・外食</div>
+        <div class="dest-chip"><span class="dest-emoji">🦁</span> 動物園・水族館</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <h2>かんたん3ステップ</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>行き先を選ぶ</h3>
+          <p>5つのタイプから近いものを選択。日付とお出かけ先を入力します。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>リストを確認</h3>
+          <p>天気と気温に合わせた持ち物リストが自動で完成。追加・削除も自由に。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>家族と準備</h3>
+          <p>リストを家族に共有して、それぞれチェック。準備完了がひと目でわかります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Screenshots ===== -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <h2>スクリーンショット</h2>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="screenshot-item">
+        <div class="screenshot-placeholder">ホーム画面<br>（準備中）</div>
+        <p class="screenshot-label">ホーム</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-placeholder">行き先選択<br>（準備中）</div>
+        <p class="screenshot-label">行き先を選ぶ</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-placeholder">チェックリスト<br>（準備中）</div>
+        <p class="screenshot-label">持ち物チェック</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-placeholder">家族共有<br>（準備中）</div>
+        <p class="screenshot-label">リアルタイム共有</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-placeholder">振り返り<br>（準備中）</div>
+        <p class="screenshot-label">振り返り</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-icon">👜</div>
+        <div class="about-content">
+          <h2>子育て中の親が開発しています</h2>
+          <p>
+            じゅんびちょうは、「毎回おむつ忘れる…」「パパに準備任せたいけど何を持っていくか伝えるのが面倒」「これを持っていけばよかったと思っても、次回には忘れてる」という自分自身の経験から生まれたアプリです。<br>
+            個人開発のため至らない点もあるかもしれませんが、使いやすいアプリを目指して改善を続けていきます。<br>
+            ご要望やご意見がありましたら、お気軽にお問い合わせください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Data & Privacy ===== -->
+  <section class="privacy-section" id="privacy">
+    <div class="container">
+      <h2>データの取り扱いについて</h2>
+
+      <div class="privacy-cards">
+        <div class="privacy-card">
+          <h3>🔐 認証情報</h3>
+          <p>Google / Apple のOAuth認証を使用。パスワードはアプリ側で保持しません。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>👶 お子さまの情報</h3>
+          <p>お子さまの名前・生年月日はリスト生成の最適化にのみ使用します。外部に送信しません。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>📍 位置情報</h3>
+          <p>天気予報の取得にのみ使用します。位置情報の保存はしません。地域名の手入力でも利用可能です。</p>
+        </div>
+        <div class="privacy-card">
+          <h3>🗑️ アカウント削除</h3>
+          <p>設定画面からいつでもアカウントと全データを削除できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== English Section (for Google OAuth verification) ===== -->
+  <section class="english-section" id="english">
+    <div class="container">
+      <h2>About Junbicho</h2>
+      <p class="en-subtitle">A family packing checklist app for outings with young children.</p>
+
+      <div class="en-grid">
+        <div class="en-block">
+          <h3>What is Junbicho?</h3>
+          <p>
+            Junbicho is a packing checklist app designed for parents of young children (ages 0–3).
+            It automatically generates a packing list based on your destination type and weather forecast,
+            and lets family members share and check off items in real time.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Key Features</h3>
+          <ul>
+            <li>Weather-based packing suggestions (sun, rain, snow × temperature)</li>
+            <li>5 destination types (park, mall, grandparents, restaurant, zoo)</li>
+            <li>Real-time family sharing (see who packed what)</li>
+            <li>Post-outing review ("should have brought…" for next time)</li>
+            <li>Shopping list integration</li>
+            <li>Text sharing for non-app users (grandparents via LINE, etc.)</li>
+          </ul>
+        </div>
+
+        <div class="en-block">
+          <h3>Authentication</h3>
+          <p>
+            Junbicho uses Google OAuth 2.0 and Apple Sign-In for authentication.
+            We request access to your basic profile information (name and email address)
+            solely for account identification purposes. We do not access any other
+            Google or Apple services on your behalf.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Data We Collect</h3>
+          <ul>
+            <li>Email address (via OAuth, for account identification)</li>
+            <li>Display name (via OAuth, shown to family members)</li>
+            <li>Children's name &amp; birth date (for age-based suggestions, stored only in our database)</li>
+            <li>Approximate location (for weather forecast, not stored)</li>
+            <li>App usage analytics (anonymized, via Firebase Analytics)</li>
+            <li>Crash reports (via Firebase Crashlytics)</li>
+          </ul>
+        </div>
+
+        <div class="en-data-table">
+          <h3>Google API Scopes &amp; Usage</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Scope</th>
+                <th>Purpose</th>
+                <th>Data Accessed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>openid</code></td>
+                <td>Authentication</td>
+                <td>User identifier</td>
+              </tr>
+              <tr>
+                <td><code>email</code></td>
+                <td>Account identification</td>
+                <td>Email address</td>
+              </tr>
+              <tr>
+                <td><code>profile</code></td>
+                <td>Display name for family sharing</td>
+                <td>Name, profile picture URL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="en-block">
+          <h3>Data Deletion</h3>
+          <p>
+            Users can delete their account and all associated data at any time
+            through the app's Settings screen. Upon deletion, all user data
+            including authentication records, database records, and children's information
+            are permanently removed.
+          </p>
+        </div>
+
+        <div class="en-block">
+          <h3>Contact &amp; Developer</h3>
+          <p>
+            Developer: MopsWorks<br>
+            <!-- TODO: メールアドレスを記入 -->
+            Email: <a href="mailto:contact@mopsworks.jp">contact@mopsworks.jp</a><br>
+            Website: <a href="https://mopsworks.jp" target="_blank" rel="noopener">mopsworks.jp</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Support / Contact ===== -->
+  <section class="support" id="support">
+    <div class="container">
+      <h2>お問い合わせ</h2>
+      <p>
+        アプリに関するご質問・不具合のご報告・ご要望などがございましたら、<br>
+        以下のメールアドレスまでお気軽にご連絡ください。
+      </p>
+      <!-- TODO: メールアドレスを確認・更新 -->
+      <a href="mailto:contact@mopsworks.jp" class="support-email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+        contact@mopsworks.jp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">じゅんび<span>ちょう</span></div>
+      <ul class="footer-links">
+        <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+        <li><a href="#support">お問い合わせ</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 MopsWorks. All rights reserved.</p>
+      <p class="footer-attribution">Weather data by <a href="https://www.weatherapi.com/" target="_blank" rel="noopener"
+          style="color: rgba(255,255,255,0.5);">WeatherAPI.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleEnglish() {
+      var section = document.getElementById('english');
+      var btn = document.getElementById('langToggle');
+      var isVisible = section.classList.contains('is-visible');
+      if (isVisible) {
+        section.classList.remove('is-visible');
+        btn.classList.remove('is-active');
+        btn.textContent = 'English';
+      } else {
+        section.classList.add('is-visible');
+        btn.classList.add('is-active');
+        btn.textContent = '日本語に戻す';
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+</body>
+
+</html>
