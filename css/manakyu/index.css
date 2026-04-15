@@ -244,9 +244,22 @@ section {
   border-radius: 12px;
   font-size: 13px;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
   opacity: 0.4;
   cursor: default;
+  text-decoration: none;
+}
+
+.store-badge--active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.store-badge--active:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(44, 37, 32, 0.22);
+  color: var(--text-on-primary);
 }
 
 .store-badge .small-text {
