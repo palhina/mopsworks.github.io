@@ -63,7 +63,7 @@ body {
   color: var(--text-muted);
 }
 
-.header__meta span + span::before {
+.header__meta span+span::before {
   content: "｜";
   margin: 0 6px;
 }
@@ -277,4 +277,154 @@ body {
   .toc {
     padding: 20px 22px;
   }
+}
+
+/* =========================================================
+   以下、サポートページ向けコンポーネント（2026-04-18 追加）
+   ========================================================= */
+
+/* ── Contact Card (連絡先カード) ── */
+.contact-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 16px 0;
+}
+
+.contact-card__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.contact-card__value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--terracotta);
+  word-break: break-all;
+}
+
+.contact-card__note {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.7;
+}
+
+/* ── FAQ Accordion (よくある質問) ── */
+.faq-list {
+  list-style: none;
+  margin: 8px 0;
+  padding-left: 0;
+}
+
+.faq-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 40px;
+  line-height: 1.7;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "Q";
+  color: var(--terracotta);
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.faq-item summary::after {
+  content: "＋";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item__answer {
+  padding: 14px 18px 18px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+  line-height: 1.9;
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-item__answer::before {
+  content: "A ";
+  color: var(--sage);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.faq-item__answer p {
+  display: inline;
+}
+
+.faq-item__answer p+p {
+  display: block;
+  margin-top: 10px;
+}
+
+/* ── Step List (手順リスト) ── */
+/* .section ul のスタイル干渉を避けるため、ul ではなく ol 想定で定義 */
+.step-list {
+  list-style: none;
+  counter-reset: step-counter;
+  margin: 12px 0 14px 0;
+  padding: 0;
+}
+
+.step-list li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.step-list li::marker {
+  content: "";
+}
+
+.step-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  background: var(--terracotta);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
