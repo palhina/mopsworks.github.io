@@ -201,6 +201,7 @@ section { padding: 60px 0; }
   height: 28px;
   background: var(--bg-card);
   border-radius: 0 0 16px 16px;
+  z-index: 1;
 }
 
 .placeholder-text {
@@ -213,6 +214,16 @@ section { padding: 60px 0; }
   font-size: 32px;
   display: block;
   margin-bottom: 8px;
+}
+
+.phone-screenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
 }
 
 /* Store badges */
@@ -401,6 +412,39 @@ section { padding: 60px 0; }
   font-weight: 500;
   text-align: center;
   padding: 16px;
+}
+
+.screenshot-img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-img {
+  max-height: 90vh;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  cursor: zoom-out;
 }
 
 .screenshot-label {

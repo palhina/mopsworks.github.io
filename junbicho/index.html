@@ -62,10 +62,7 @@
       <div class="hero-mockup">
         <div class="phone-frame">
           <div class="phone-screen">
-            <div class="placeholder-text">
-              <span class="icon">👜</span>
-              アプリスクリーンショット<br>（準備中）
-            </div>
+            <img src="screenShots/junbicho-hero.png" alt="じゅんびちょうアプリ" class="phone-screenshot">
           </div>
         </div>
       </div>
@@ -194,25 +191,30 @@
     </div>
     <div class="screenshots-scroll">
       <div class="screenshot-item">
-        <div class="screenshot-placeholder">ホーム画面<br>（準備中）</div>
+        <img src="screenShots/ss65_home.png" alt="ホーム" class="screenshot-img" onclick="openLightbox(this)">
         <p class="screenshot-label">ホーム</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-placeholder">行き先選択<br>（準備中）</div>
+        <img src="screenShots/ss_pick.png" alt="行き先を選ぶ" class="screenshot-img" onclick="openLightbox(this)">
         <p class="screenshot-label">行き先を選ぶ</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-placeholder">チェックリスト<br>（準備中）</div>
+        <img src="screenShots/ss_list.png" alt="持ち物チェック" class="screenshot-img" onclick="openLightbox(this)">
         <p class="screenshot-label">持ち物チェック</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-placeholder">家族共有<br>（準備中）</div>
+        <img src="screenShots/ss_share.png" alt="リアルタイム共有" class="screenshot-img" onclick="openLightbox(this)">
         <p class="screenshot-label">リアルタイム共有</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-placeholder">振り返り<br>（準備中）</div>
+        <img src="screenShots/ss_review.png" alt="振り返り" class="screenshot-img" onclick="openLightbox(this)">
         <p class="screenshot-label">振り返り</p>
       </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
     </div>
   </section>
 
@@ -398,6 +400,24 @@
   </footer>
 
   <script>
+    function openLightbox(img) {
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightboxImg');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
     function toggleEnglish() {
       var section = document.getElementById('english');
       var btn = document.getElementById('langToggle');
