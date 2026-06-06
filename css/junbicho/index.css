@@ -249,6 +249,16 @@ section { padding: 60px 0; }
   cursor: default;
 }
 
+.store-badge--active {
+  opacity: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.store-badge--active:hover {
+  opacity: 0.8;
+}
+
 .store-badge .small-text {
   font-size: 10px;
   font-weight: 400;
