@@ -1,0 +1,224 @@
+/* ヘッダー */
+header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pug-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: '🐾';
+  font-size: 18px;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.description-en {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* サービスカード */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.service-card {
+  background: var(--background-alt);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+a.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.service-card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-link-label {
+  font-size: 12px;
+  color: var(--accent, #D4745B);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.service-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.service-coming-soon {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: var(--background);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 会社情報 */
+.info-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.info-value {
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.info-value a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.info-value a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-dark);
+}
+
+.copyright {
+  color: var(--text-muted);
+}
+
+/* フィロソフィー */
+.philosophy {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--background-alt);
+  border-radius: 12px;
+}
+
+.philosophy-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.philosophy-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 26px;
+  }
+
+  .pug-icon {
+    font-size: 40px;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
